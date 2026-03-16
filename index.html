@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Oculta da Marcenaria | Área de Membros</title>
+    <meta name="description" content="Acesse seu super pack de projetos de marcenaria e transforme seu hobby em renda.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal">
+            <div class="logo-icon" style="margin: 0 auto 1.5rem;">M</div>
+            <h2>Bem-vindo de volta!</h2>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Acesse sua biblioteca exclusiva de projetos.</p>
+            <button class="btn" onclick="closeLogin()">Acessar Área de Membros</button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">M</div>
+                <span class="logo-text">MARCENEIRO PRO</span>
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-item active" onclick="switchTab('aulas')">
+                        <i class="fas fa-play-circle nav-icon"></i>
+                        <span>Aulas</span>
+                    </li>
+                    <li class="nav-item" onclick="switchTab('renda')">
+                        <i class="fas fa-chart-line nav-icon"></i>
+                        <span>Renda Extra</span>
+                    </li>
+                    <li class="nav-item" onclick="switchTab('pack')">
+                        <i class="fas fa-box-open nav-icon"></i>
+                        <span>Super Pack</span>
+                    </li>
+                    <li class="nav-item" onclick="switchTab('bonus')">
+                        <i class="fas fa-gift nav-icon"></i>
+                        <span>Bônus</span>
+                    </li>
+                    <li class="nav-item" onclick="switchTab('certificado')">
+                        <i class="fas fa-award nav-icon"></i>
+                        <span>Certificado</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header>
+                <h1 id="pageTitle">Minhas Aulas</h1>
+                <p id="pageSubtitle" class="subtitle">Assista e domine a arte da marcenaria.</p>
+            </header>
+
+            <!-- Section: Aulas -->
+            <section id="aulas" class="tab-section active">
+                <div class="grid">
+                    <!-- Modulo 1 -->
+                    <div class="card">
+                        <div class="card-tag">Módulo 1</div>
+                        <h3>Fundamentos da Marcenaria</h3>
+                        <p class="text-muted">Ferramentas essenciais e segurança no trabalho.</p>
+                        <div class="lesson-list">
+                            <div class="lesson-item"><i class="fas fa-play"></i> Introdução às Ferramentas</div>
+                            <div class="lesson-item"><i class="fas fa-play"></i> Tipos de Madeira</div>
+                            <div class="lesson-item"><i class="fas fa-play"></i> Segurança e EPIs</div>
+                        </div>
+                    </div>
+                    <!-- Modulo 2 -->
+                    <div class="card">
+                        <div class="card-tag">Módulo 2</div>
+                        <h3>Técnicas Intermediárias</h3>
+                        <p class="text-muted">Corte preciso, lixamento e montagem básica.</p>
+                        <div class="lesson-list">
+                            <div class="lesson-item"><i class="fas fa-play"></i> Cortes Angulares</div>
+                            <div class="lesson-item"><i class="fas fa-play"></i> Técnicas de Colagem</div>
+                            <div class="lesson-item"><i class="fas fa-play"></i> Acabamento Profissional</div>
+                        </div>
+                    </div>
+                    <!-- Modulo 3 -->
+                    <div class="card">
+                        <div class="card-tag">Módulo 3</div>
+                        <h3>Projetos Avançados</h3>
+                        <p class="text-muted">Móveis planejados e estruturas complexas.</p>
+                        <div class="lesson-list">
+                            <div class="lesson-item"><i class="fas fa-play"></i> Armários Planejados</div>
+                            <div class="lesson-item"><i class="fas fa-play"></i> Projetos em MDF vs Sólida</div>
+                            <div class="lesson-item"><i class="fas fa-play"></i> Instalação no Cliente</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Renda -->
+            <section id="renda" class="tab-section">
+                <div class="card" style="max-width: 800px;">
+                    <h2>Como Transformar Marcenaria em Renda</h2>
+                    <p style="margin: 1.5rem 0; line-height: 1.6;">Nesta seção, você aprenderá estratégias de vendas, precificação e como atrair seus primeiros clientes através das redes sociais.</p>
+                    <div class="lesson-list">
+                        <div class="lesson-item"><i class="fas fa-money-bill-wave"></i> Estratégia de Precificação Pro</div>
+                        <div class="lesson-item"><i class="fas fa-camera"></i> Como tirar fotos que vendem móveis</div>
+                        <div class="lesson-item"><i class="fas fa-share-alt"></i> Gatilhos mentais para vendas no WhatsApp</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Pack -->
+            <section id="pack" class="tab-section">
+                <div class="grid">
+                    <div class="card">
+                        <i class="fas fa-file-pdf" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3>Pack Projetos 2.0</h3>
+                        <p class="text-muted">Mais de 500 projetos detalhados em PDF e DXF.</p>
+                        <button class="btn">Baixar Agora</button>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-folder-tree" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3>Planos de Corte</h3>
+                        <p class="text-muted">Economize madeira com nossos planos otimizados.</p>
+                        <button class="btn">Acessar Planilha</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Bonus -->
+            <section id="bonus" class="tab-section">
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-tag">EXCLUSIVO</div>
+                        <h3>Lista de Fornecedores</h3>
+                        <p class="text-muted">Consiga descontos em máquinas e insumos.</p>
+                        <button class="btn">Ver Lista</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-tag">BRINDE</div>
+                        <h3>Mini Curso de SketchUp</h3>
+                        <p class="text-muted">Aprenda a desenhar seus móveis em 3D.</p>
+                        <button class="btn">Acessar Bônus</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Certificado -->
+            <section id="certificado" class="tab-section">
+                <div id="certLocked" class="certificate-lock">
+                    <i class="fas fa-lock lock-icon"></i>
+                    <h2>Seu Certificado está Quase Pronto!</h2>
+                    <p class="subtitle">O certificado é liberado após 7 dias de consumo da plataforma para garantir seu aprendizado.</p>
+                    <div id="countdownTimer" class="countdown">Carregando...</div>
+                </div>
+                <div id="certUnlocked" class="certificate-lock" style="display: none;">
+                    <i class="fas fa-certificate lock-icon" style="color: #10b981;"></i>
+                    <h2>Parabéns, Marceneiro!</h2>
+                    <p class="subtitle">Seu certificado de conclusão está disponível para download.</p>
+                    <button class="btn" style="background: #10b981; color: white;">Baixar Certificado PDF</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
