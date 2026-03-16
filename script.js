@@ -58,7 +58,10 @@ function updateCertificateStatus() {
 
     // Update name display
     const nameDisplay = document.getElementById('studentNameDisplay');
+    const logoNameDisplay = document.getElementById('logoStudentName');
+
     if (nameDisplay) nameDisplay.innerText = studentName;
+    if (logoNameDisplay) logoNameDisplay.innerText = studentName.split(' ')[0].toUpperCase(); // Just first name in logo
 
     if (!firstAccess) return;
 
