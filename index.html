@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
@@ -19,8 +21,13 @@
     <div id="loginModal" class="modal-overlay">
         <div class="modal">
             <div class="logo-icon" style="margin: 0 auto 1.5rem;">M</div>
-            <h2>Bem-vindo de volta!</h2>
-            <p style="color: var(--text-muted); margin-top: 0.5rem;">Acesse sua biblioteca exclusiva de projetos.</p>
+            <h2>Bem-vindo aluno(a)!</h2>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Digite seu nome para personalizar seu certificado.
+            </p>
+            <div class="input-group">
+                <label for="studentName">Seu Nome Completo</label>
+                <input type="text" id="studentName" class="input-field" placeholder="Ex: João Silva">
+            </div>
             <button class="btn" onclick="closeLogin()">Acessar Área de Membros</button>
         </div>
     </div>
@@ -32,7 +39,7 @@
                 <div class="logo-icon">M</div>
                 <span class="logo-text">MARCENEIRO PRO</span>
             </div>
-            
+
             <nav>
                 <ul class="nav-links">
                     <li class="nav-item active" onclick="switchTab('aulas')">
@@ -72,34 +79,49 @@
                     <!-- Modulo 1 -->
                     <div class="card">
                         <div class="card-tag">Módulo 1</div>
-                        <h3>Fundamentos da Marcenaria</h3>
-                        <p class="text-muted">Ferramentas essenciais e segurança no trabalho.</p>
+                        <h3>Marcenaria Básica (Iniciante)</h3>
+                        <p class="text-muted">Fundamentos, ferramentas essenciais e primeiros projetos.</p>
                         <div class="lesson-list">
-                            <div class="lesson-item"><i class="fas fa-play"></i> Introdução às Ferramentas</div>
-                            <div class="lesson-item"><i class="fas fa-play"></i> Tipos de Madeira</div>
-                            <div class="lesson-item"><i class="fas fa-play"></i> Segurança e EPIs</div>
+                            <a href="https://www.youtube.com/watch?v=jqIFOZZvkAc" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 1. Introdução ao Universo</a>
+                            <a href="https://www.youtube.com/watch?v=nJZ_v3cOcII" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 2. Ferramentas Essenciais</a>
+                            <a href="https://www.youtube.com/watch?v=uC3oaks9VwI" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 3. Projetar seus Móveis</a>
+                            <a href="https://www.youtube.com/watch?v=w0OxkPxt7VE" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 4. Técnicas de Corte</a>
                         </div>
                     </div>
                     <!-- Modulo 2 -->
                     <div class="card">
                         <div class="card-tag">Módulo 2</div>
-                        <h3>Técnicas Intermediárias</h3>
-                        <p class="text-muted">Corte preciso, lixamento e montagem básica.</p>
+                        <h3>Marcenaria Intermediária</h3>
+                        <p class="text-muted">Montagem, acabamentos e estruturas de móveis.</p>
                         <div class="lesson-list">
-                            <div class="lesson-item"><i class="fas fa-play"></i> Cortes Angulares</div>
-                            <div class="lesson-item"><i class="fas fa-play"></i> Técnicas de Colagem</div>
-                            <div class="lesson-item"><i class="fas fa-play"></i> Acabamento Profissional</div>
+                            <a href="https://www.youtube.com/watch?v=VSNXyzGS5jE" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 1. Encaixes e Juntas</a>
+                            <a href="https://www.youtube.com/watch?v=5zkXUGcdCNk" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 2. Laminação e Revestimentos</a>
+                            <a href="https://www.youtube.com/watch?v=NXFlEj9OIvs" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 3. Móveis Planejados</a>
+                            <a href="https://www.youtube.com/watch?v=CzH7Vus8Fwo" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 4. Instalação de Ferragens</a>
                         </div>
                     </div>
                     <!-- Modulo 3 -->
                     <div class="card">
                         <div class="card-tag">Módulo 3</div>
-                        <h3>Projetos Avançados</h3>
-                        <p class="text-muted">Móveis planejados e estruturas complexas.</p>
+                        <h3>Marcenaria Avançada</h3>
+                        <p class="text-muted">Marcenaria fina, marchetaria e projetos complexos.</p>
                         <div class="lesson-list">
-                            <div class="lesson-item"><i class="fas fa-play"></i> Armários Planejados</div>
-                            <div class="lesson-item"><i class="fas fa-play"></i> Projetos em MDF vs Sólida</div>
-                            <div class="lesson-item"><i class="fas fa-play"></i> Instalação no Cliente</div>
+                            <a href="https://www.youtube.com/watch?v=wg_GvQheinM" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 1. Marchetaria Geométrica</a>
+                            <a href="https://www.youtube.com/watch?v=8RhHiC7uQZg" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 2. Marcenaria Fina Advanced</a>
+                            <a href="https://www.youtube.com/watch?v=Ly1esljurNc" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 3. Ilusão de Ótica 3D</a>
+                            <a href="https://www.youtube.com/watch?v=XkDY12gzBp8" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 4. Acabamentos de Luxo</a>
                         </div>
                     </div>
                 </div>
@@ -107,13 +129,31 @@
 
             <!-- Section: Renda -->
             <section id="renda" class="tab-section">
-                <div class="card" style="max-width: 800px;">
-                    <h2>Como Transformar Marcenaria em Renda</h2>
-                    <p style="margin: 1.5rem 0; line-height: 1.6;">Nesta seção, você aprenderá estratégias de vendas, precificação e como atrair seus primeiros clientes através das redes sociais.</p>
-                    <div class="lesson-list">
-                        <div class="lesson-item"><i class="fas fa-money-bill-wave"></i> Estratégia de Precificação Pro</div>
-                        <div class="lesson-item"><i class="fas fa-camera"></i> Como tirar fotos que vendem móveis</div>
-                        <div class="lesson-item"><i class="fas fa-share-alt"></i> Gatilhos mentais para vendas no WhatsApp</div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-tag">VENDA MUITO</div>
+                        <h3>Renda Extra com Marcenaria</h3>
+                        <p class="text-muted">Estratégias para faturar alto com marcenaria artesanal.</p>
+                        <div class="lesson-list">
+                            <a href="https://www.youtube.com/watch?v=_oz6iAYwoh0" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 1. Baixo Custo / Alto Lucro</a>
+                            <a href="https://www.youtube.com/watch?v=G3DymQ6-rXY" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 2. 12 Dicas de Negócio</a>
+                            <a href="https://www.youtube.com/watch?v=RxlDv_GHj0c" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 3. Objetos que Vendem Muito</a>
+                            <a href="https://www.youtube.com/watch?v=qFabYHKjI3U" target="_blank" class="lesson-item"><i
+                                    class="fas fa-play"></i> 4. Fature seus primeiros R$ 3k</a>
+                        </div>
+                    </div>
+                    <!-- Existing Business Card -->
+                    <div class="card">
+                        <h3>Gestão e Precificação</h3>
+                        <p class="text-muted">Aprenda a valorizar sua mão de obra.</p>
+                        <div class="lesson-list">
+                            <div class="lesson-item"><i class="fas fa-money-bill-wave"></i> Tabela de Precificação Pro
+                            </div>
+                            <div class="lesson-item"><i class="fas fa-camera"></i> Fotos que Vendem</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -122,13 +162,15 @@
             <section id="pack" class="tab-section">
                 <div class="grid">
                     <div class="card">
-                        <i class="fas fa-file-pdf" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-file-pdf"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
                         <h3>Pack Projetos 2.0</h3>
                         <p class="text-muted">Mais de 500 projetos detalhados em PDF e DXF.</p>
                         <button class="btn">Baixar Agora</button>
                     </div>
                     <div class="card">
-                        <i class="fas fa-folder-tree" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-folder-tree"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
                         <h3>Planos de Corte</h3>
                         <p class="text-muted">Economize madeira com nossos planos otimizados.</p>
                         <button class="btn">Acessar Planilha</button>
@@ -159,12 +201,13 @@
                 <div id="certLocked" class="certificate-lock">
                     <i class="fas fa-lock lock-icon"></i>
                     <h2>Seu Certificado está Quase Pronto!</h2>
-                    <p class="subtitle">O certificado é liberado após 7 dias de consumo da plataforma para garantir seu aprendizado.</p>
+                    <p class="subtitle">O certificado é liberado após 7 dias de consumo da plataforma para garantir seu
+                        aprendizado.</p>
                     <div id="countdownTimer" class="countdown">Carregando...</div>
                 </div>
                 <div id="certUnlocked" class="certificate-lock" style="display: none;">
                     <i class="fas fa-certificate lock-icon" style="color: #10b981;"></i>
-                    <h2>Parabéns, Marceneiro!</h2>
+                    <h2>Parabéns, <span id="studentNameDisplay"></span>!</h2>
                     <p class="subtitle">Seu certificado de conclusão está disponível para download.</p>
                     <button class="btn" style="background: #10b981; color: white;">Baixar Certificado PDF</button>
                 </div>
@@ -174,4 +217,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

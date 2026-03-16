@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary: #f59e0b; /* Amber/Wood */
+    --primary: #f59e0b;
+    /* Amber/Wood */
     --primary-dark: #b45309;
     --bg-dark: #0f172a;
     --bg-surface: #1e293b;
@@ -46,8 +47,15 @@ body {
     filter: blur(80px);
 }
 
-.blob-1 { top: -10%; left: -10%; }
-.blob-2 { bottom: -10%; right: -10%; }
+.blob-1 {
+    top: -10%;
+    left: -10%;
+}
+
+.blob-2 {
+    bottom: -10%;
+    right: -10%;
+}
 
 /* Layout */
 .app-container {
@@ -162,8 +170,15 @@ h1 {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Cards & Modules */
@@ -270,6 +285,41 @@ h1 {
     transform: scale(1.02);
 }
 
+.input-group {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    color: var(--text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.input-field:focus {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Certificate Name */
+#studentNameDisplay {
+    font-weight: 700;
+    color: var(--primary);
+}
+
 /* Certificate Message */
 .certificate-lock {
     display: flex;
@@ -300,7 +350,7 @@ h1 {
     .app-container {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         height: auto;
@@ -313,24 +363,28 @@ h1 {
         border-right: none;
         border-top: 1px solid var(--glass-border);
     }
-    
-    .logo { display: none; }
-    
+
+    .logo {
+        display: none;
+    }
+
     .nav-links {
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
     }
-    
+
     .nav-item {
         flex-direction: column;
         gap: 4px;
         font-size: 0.7rem;
         padding: 8px;
     }
-    
-    .nav-icon { font-size: 1.1rem; }
-    
+
+    .nav-icon {
+        font-size: 1.1rem;
+    }
+
     .main-content {
         padding-bottom: 80px;
     }

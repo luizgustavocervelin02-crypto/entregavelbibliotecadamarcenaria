@@ -36,9 +36,14 @@ function switchTab(tabId) {
 
 // Login Modal Logic
 function closeLogin() {
+    const nameInput = document.getElementById('studentName');
+    const studentName = nameInput.value.trim() || "Marceneiro(a)";
+
     document.getElementById('loginModal').style.display = 'none';
-    
-    // Set join date only if it doesn't exist
+
+    // Save info to localStorage
+    localStorage.setItem('student_name', studentName);
+
     if (!localStorage.getItem('first_access_date')) {
         const joinDate = new Date().getTime();
         localStorage.setItem('first_access_date', joinDate);
@@ -49,6 +54,12 @@ function closeLogin() {
 // Certificate 7-day Logic
 function updateCertificateStatus() {
     const firstAccess = localStorage.getItem('first_access_date');
+    const studentName = localStorage.getItem('student_name') || "Marceneiro(a)";
+
+    // Update name display
+    const nameDisplay = document.getElementById('studentNameDisplay');
+    if (nameDisplay) nameDisplay.innerText = studentName;
+
     if (!firstAccess) return;
 
     const sevenDaysInMs = 7 * 24 * 60 * 60 * 1000;
@@ -61,18 +72,18 @@ function updateCertificateStatus() {
     const timerDisplay = document.getElementById('countdownTimer');
 
     if (timeRemaining <= 0) {
-        certLocked.style.display = 'none';
-        certUnlocked.style.display = 'flex';
+        if (certLocked) certLocked.style.display = 'none';
+        if (certUnlocked) certUnlocked.style.display = 'flex';
     } else {
-        certLocked.style.display = 'flex';
-        certUnlocked.style.display = 'none';
-        
+        if (certLocked) certLocked.style.display = 'flex';
+        if (certUnlocked) certUnlocked.style.display = 'none';
+
         // Calculate days, hours, minutes
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        
-        timerDisplay.innerText = `${days}d ${hours}h ${minutes}m restantes`;
+
+        if (timerDisplay) timerDisplay.innerText = `${days}d ${hours}h ${minutes}m restantes`;
     }
 }
 
@@ -85,6 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         sessionStorage.setItem('modal_dismissed', 'true');
     }
-    
+
     updateCertificateStatus();
 });
